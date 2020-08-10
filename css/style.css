@@ -1,0 +1,1500 @@
+body {
+  font-family: "Arial", sans serif;
+}
+
+@font-face {
+  font-family: 'sourcesanspro';
+  src: url(../fonts/sourcesanspro.ttf);
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(../fonts/SourceSansPro-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*///// хедер\\\\\*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  width: 100%;
+  padding: 0 6em 0 6em;
+  border-bottom: 2px solid #ccc;
+}
+
+.header .menu ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.header .menu ul li {
+  margin: 20px 10px;
+}
+
+.header .menu ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header .menu ul a:hover {
+  color: #1876bd;
+}
+
+#selected a {
+  color: #1876bd;
+}
+
+.lang {
+  padding-right: 40px;
+}
+
+#language {
+  border: 0;
+  color: #aaa;
+  font-size: 1em;
+  margin-left: 3em;
+}
+
+/* //////////////////////////////// */
+.blok_top {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+}
+
+.left_top {
+  width: 50%;
+  float: left;
+  background: linear-gradient(to left, #E8E8E8, #FEFEFE);
+}
+
+.ico1 {
+  margin: 10% 0 0 6em;
+  width: 50%;
+  float: left;
+}
+
+.foto1 {
+  float: right;
+  padding-right: 3em;
+}
+
+.right_top {
+  width: 50%;
+  float: right;
+  background: linear-gradient(to right, #FFFFFF, #E2E3F2);
+}
+
+.ico2 {
+  margin: 10% 0 0 3em;
+  width: 50%;
+  float: left;
+}
+
+.foto2 {
+  float: right;
+  padding-right: 6em;
+}
+
+/*///*/
+.grayblock {
+  background-color: #f8f8f8;
+}
+
+/*///*/
+.beforemidlnavup {
+  position: relative;
+  font-weight: bold;
+}
+
+.midlnavup {
+  position: relative;
+  padding: 1em 6em 1em 6em;
+  display: flex;
+  justify-content: space-around;
+  /*прижимает содержимое к центру */
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+ul#midlnav {
+  list-style: none;
+  position: relative;
+  font-size: 12px;
+}
+
+ul#midlnav li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #555;
+}
+
+ul#midlnav li a {
+  padding: 10px 15px;
+  display: block;
+  color: #919179;
+  text-decoration: none;
+}
+
+ul#midlnav li a:hover {
+  color: #1876bd;
+}
+
+/*///
+*/
+/*menu-main*/
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+}
+
+.menu-main li {
+  display: inline-block;
+}
+
+.menu-main li:after {
+  color: #606060;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+  content: none;
+}
+
+.menu-main a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  display: inline-block;
+  transition: color .2s;
+}
+
+.menu-main a, .menu-main a:visited {
+  color: #9d999d;
+}
+
+.menu-main a.current, .menu-main a:hover {
+  color: #000;
+}
+
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #000;
+  transition: .8s;
+}
+
+.menu-main a:hover:before, .menu-main .current:before {
+  left: 0;
+}
+
+.menu-main a:hover:after, .menu-main .current:after {
+  right: 0;
+}
+
+.menu-main a:-webkit-any-link {
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .menu-main {
+    padding-top: 0;
+  }
+
+  .menu-main li {
+    display: block;
+  }
+
+  .menu-main li:after {
+    content: none;
+  }
+
+  .menu-main a {
+    padding: 25px 0 20px;
+    margin: 0 30px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  width: 100%;
+  padding: 2em 6em 5em 6em;
+}
+
+.Shadowaround {
+  display: flex;
+  width: 15%;
+  min-width: 180px;
+  max-width: 185px;
+  height: auto;
+  margin: 5px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card0 {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 0.2em;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+}
+
+.card0 img {
+  display: block;
+  width: 2em;
+  height: 1.8em;
+  margin-top: 0.2em;
+}
+
+.card1 {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 0.2em;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+}
+
+.card1 img {
+  display: block;
+  width: 2em;
+  height: 1.8em;
+  margin-top: 0.2em;
+}
+
+.Tt {
+  display: block;
+  font-family: 'Source Sans Pro';
+  font-size: 2em;
+}
+
+.Tttext {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  font-size: 0.5em;
+  margin-left: 4em;
+  width: 100%;
+  float: right;
+}
+
+.pcard {
+  width: 100%;
+}
+
+.pcard p {
+  text-align: center;
+  margin: 2em 0 0 0;
+}
+
+#graycolor {
+  color: #ccc;
+}
+
+/*//////////||||||||||||*/
+.kurs {
+  display: inline-flex;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-around;
+  /*прижимает содержимое к центру */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.dol {
+  width: 25%;
+  text-align: center;
+  margin: 2em;
+}
+
+.kurstext {
+  display: inline-block;
+  font-weight: normal;
+}
+
+.eur {
+  width: 25%;
+  text-align: center;
+  margin: 2em;
+}
+
+.oil {
+  width: 25%;
+  text-align: center;
+  margin: 2em;
+}
+
+#redcolor {
+  color: red;
+}
+
+#greencolor {
+  color: green;
+}
+
+/*menu-main11*/
+.menu-main1 {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 20px 0;
+  text-align: center;
+  background: white;
+}
+
+.menu-main1 li {
+  display: inline-block;
+}
+
+.menu-main1 li:after {
+  color: #606060;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu-main1 li:last-child:after {
+  content: none;
+}
+
+.menu-main1 a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  display: inline-block;
+  transition: color .2s;
+}
+
+.menu-main1 a, .menu-main1 a:visited {
+  color: #9d999d;
+}
+
+.menu-main1 a.current, .menu-main1 a:hover {
+  color: #000;
+}
+
+.menu-main1 a:before,
+.menu-main1 a:after {
+  background: #000;
+  bottom: -5px;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  right: 50%;
+  top: auto;
+  transition: .8s;
+}
+
+.menu-main1 a:hover:before, .menu-main1 .current:before {
+  left: 0;
+}
+
+.menu-main1 a:hover:after, .menu-main1 .current:after {
+  right: 0;
+}
+
+.menu-main1 a:-webkit-any-link {
+  text-decoration: none;
+}
+
+/*  .article {
+    background-color: #c00000;
+
+
+  }
+
+  .aside {
+    background-color: #00b050;
+
+  }*/
+.news {
+  display: block;
+  width: 100%;
+}
+
+.mytimes {
+  width: 10%;
+  color: #ccc;
+  float: left;
+  font-size: 0.8em;
+  display: block;
+}
+
+.newstext {
+  width: 85%;
+  font-size: 0.8em;
+  margin-left: 0.8em;
+  float: left;
+  display: block;
+}
+
+.insteadfotobig {
+  width: 100%;
+  height: 200px;
+  border-radius: 3px;
+  background-color: #efefef;
+  display: block;
+}
+
+#myselected {
+  color: #1876bd;
+}
+
+.newstextcenter {
+  width: 100%;
+  font-size: 1em;
+  float: left;
+  display: block;
+}
+
+.newstextcenter1 {
+  width: 45%;
+  font-size: 1em;
+  float: left;
+  margin-right: 1em;
+  display: block;
+}
+
+.insteadfotosmall {
+  width: 45%;
+  height: 100px;
+  border-radius: 3px;
+  background-color: #efefef;
+  float: left;
+  margin-right: 1em;
+  display: block;
+}
+
+.insteadfotoright {
+  width: 100%;
+  height: 100px;
+  border-radius: 3px;
+  background-color: #efefef;
+  float: left;
+  display: block;
+}
+
+.newstextright {
+  display: block;
+  font-size: 0.8em;
+}
+
+.divbutton {
+  margin: 1em;
+  padding: 5%;
+  width: 90%;
+  height: auto;
+  float: left;
+}
+
+.but {
+  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  border: 1px solid #000;
+  border-radius: 6px !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+/*/ Рейтинг форекс брокеров//*/
+table td {
+  text-align: center;
+  vertical-align: middle;
+  border: solid 1px #000;
+  width: 9%;
+  font-size: 0.8em;
+}
+
+table {
+  table-layout: fixed;
+  border: solid 1px #000;
+  width: 100%;
+}
+
+table td .logotabl {
+  width: 95%;
+}
+
+table td .cardtabl {
+  width: 45%;
+}
+
+.buttabl {
+  width: 85%;
+  border: 1px solid #000;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.1em;
+  background: #FFFFFF;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+#myselectedbut {
+  color: #1876bd;
+  border: 2px #1876bd solid;
+  font-weight: bold;
+}
+
+.Shadowaround1 {
+  display: flex;
+  width: 32%;
+  min-width: 180px;
+  height: auto;
+  margin: 2em 0 0 0;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.Shadowaround1 img {
+  border-radius: 3px;
+  height: 100%;
+  margin: 2em 0 2em 0;
+}
+
+.hcard {
+  display: flex;
+  vertical-align: middle;
+}
+
+.hcard h5 {
+  margin: 2em 1em 2em 0;
+}
+
+.divcard {
+  display: flex;
+  width: 24%;
+  min-width: 180px;
+  height: auto;
+  margin: 2em 0 0 0;
+  background-color: white;
+}
+
+.divcard img {
+  margin: 2em 0 1em 0;
+}
+
+.hcard h6 {
+  margin: 2em 1em 2em 1em;
+}
+
+.grayblock2 {
+  background-color: #f8f8f8;
+  padding: 2em;
+}
+
+.grayblock3 {
+  background-color: #f8f8f8;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /*прижимает содержимое к центру */
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.grayblock4 {
+  background-color: #f8f8f8;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /*прижимает содержимое к центру */
+  align-items: center;
+}
+
+.grayblock4 .divcard {
+  display: block;
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  width: 20%;
+  min-width: 110px;
+  padding: 1em;
+}
+
+.hcenter {
+  text-align: center;
+}
+
+.grayblock4 .divimg {
+  display: block;
+}
+
+.grayblock4 .hcard {
+  display: flex;
+  text-align: center;
+}
+
+.grayblock4 img {
+  width: 100%;
+}
+
+.grayblock4 .hcard h6 {
+  display: block;
+  font-size: 0.8em;
+}
+
+/*/Промо форекс брокеров/*/
+.whiteblock2 {
+  background-color: #FFFFFF;
+  padding: 2em;
+}
+
+.whiteblock3 {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.whiteblock4 {
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+.whiteblock4 .divpromo {
+  display: flex;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  align-items: center;
+}
+
+.whiteblock4 img {
+  margin: 0;
+}
+
+#pforex {
+  padding-top: 1em;
+}
+
+.ptext {
+  font-size: 0.75em;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 10px;
+}
+
+#whiteblock4hr {
+  width: 100%;
+  color: #ccc;
+  /* Цвет линии для остальных браузеров */
+  background-color: #ccc;
+  /* Цвет линии для браузера Firefox и Opera */
+  height: 2px;
+  /* Толщина линии */
+  margin: 0;
+}
+
+.bottomlink {
+  display: table;
+  min-height: 200px;
+}
+
+.bottomlink a {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+/*menu-main2*/
+.menu-main2 {
+  list-style: none;
+  font-weight: 600;
+  border: none;
+}
+
+.menu-main2 li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.menu-main2 li:after {
+  color: #606060;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu-main2 li:last-child:after {
+  content: none;
+  text-decoration: none;
+}
+
+.menu-main2 a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 0px;
+  margin: 0 14px 0 10px;
+  font-size: 16px;
+  display: inline-block;
+  transition: color .2s;
+}
+
+.menu-main2 a, .menu-main2 a:visited {
+  color: #ccc;
+}
+
+.menu-main2 a.current, .menu-main2 a:hover {
+  color: #000;
+}
+
+.menu-main2 a:before,
+.menu-main2 a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #000;
+  transition: .8s;
+}
+
+.menu-main2 a:hover:before, .menu-main2 .current:before {
+  left: 0;
+}
+
+.menu-main2 a:hover:after, .menu-main2 .current:after {
+  right: 0;
+}
+
+.whiteblock5 .divpromo {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: space-around;
+  /*прижимает содержимое к краям */
+  align-items: center;
+}
+
+.imgweek {
+  width: 20%;
+}
+
+.ptextweek {
+  font-size: 0.9em;
+  text-align: left;
+  margin-left: 10px;
+  width: 55%;
+}
+
+.ptextweek p {
+  margin-bottom: 0;
+}
+
+.dateweek {
+  display: flex;
+  font-size: 0.9em;
+  text-align: left;
+  margin-left: 1em;
+  color: #ccc;
+  width: 20%;
+}
+
+/*Reviewes*/
+#hrev {
+  padding-left: 0.7em;
+}
+
+.Shadowaround2 {
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.rev {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  min-width: 180px;
+  /*height: auto;*/
+  margin: 1em 0 0 0;
+  background-color: white;
+}
+
+.revtop {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+}
+
+#revh {
+  color: #85D6F0;
+  border-right: 2px solid #ccc;
+  padding-right: 1em;
+  margin: 0 1em 0 1em;
+  vertical-align: middle;
+}
+
+#revh h6 {
+  margin: 0;
+}
+
+#revp {
+  vertical-align: middle;
+}
+
+#revp p {
+  margin: 0;
+}
+
+.revtext {
+  margin: 1em;
+  font-size: 0.8em;
+  height: auto;
+}
+
+.star {
+  padding: 0 1em 0 1em;
+  color: orange;
+}
+
+.star>span:hover:before {
+  content: "\2605";
+  color: red;
+  position: absolute;
+}
+
+.revobot {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  margin-bottom: 0.35em;
+}
+
+#revobotp p {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.amount p {
+  font-size: 0.8em;
+  margin: 0;
+  color: #ccc;
+}
+
+.divbuttonrev {
+  display: flex;
+  width: 30%;
+  margin-left: 0.55em;
+  margin-bottom: 2em;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
+.but1 {
+  border: 1px solid #000;
+  border-radius: 4px !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+/*/preFooter/*/
+#preFooter {
+  font-family: Arial;
+  background-color: #fff;
+  color: #000;
+}
+
+.hcenterpreFooter {
+  width: 100%;
+  text-align: center;
+}
+
+#preFooter ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
+}
+
+#preFooter h5 {
+  font-size: 1.2em;
+  color: #000;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+#preFooter a {
+  color: #000;
+  text-decoration: none;
+}
+
+#preFooter a:hover, #preFooter a:focus {
+  text-decoration: none;
+  color: #ccc;
+}
+
+#preFooter .myCols {
+  font-size: 0.8em;
+  text-align: left;
+}
+
+#preFooter svg {
+  width: 1em;
+  margin-right: 0.2em;
+  color: red;
+}
+
+@media screen and (max-width: 767px) {
+  #preFooter {
+    text-align: center;
+  }
+
+  #preFooter .myCols {
+    text-align: center;
+  }
+}
+
+#footer {
+  background: linear-gradient(to top, #E2E3F2, #FFFFFF);
+  /* Цвет фона */
+  width: 100%;
+  /* Ширина слоя */
+  margin-top: 2%;
+  padding: 0 5% 0 5%;
+}
+
+.foottop {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  width: 100%;
+}
+
+.footdiv {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 1em;
+}
+
+#footer p {
+  font-size: 0.8em;
+  margin: 0.5em 0.5em 0 0.5em;
+  padding-bottom: 2.5em;
+}
+
+.footmenu {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  margin: 1em;
+}
+
+.footmenu .menu ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.footmenu .menu ul li {
+  margin: 0px 10px;
+}
+
+.footmenu .menu ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footmenu .menu ul a:hover {
+  color: #1876bd;
+}
+
+.footbottom {
+  display: block;
+}
+
+/*pages 2*/
+.toparticle {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  width: 100%;
+  padding: 1em;
+}
+
+.topart {
+  width: 30%;
+}
+
+.topart1 {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-around;
+  ;
+  /*прижимает содержимое к краям */
+  align-items: center;
+}
+
+#articlselect {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #ccc;
+  font-size: 1em;
+}
+
+.topart2 #articlselect, .topart3 #articlselect {
+  width: 10em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+.topart4 {
+  width: 18em;
+  vertical-align: middle;
+}
+
+#artform {
+  background-color: #fff;
+  border-radius: 4px;
+  margin-left: 3em;
+}
+
+.search1 {
+  width: 100%;
+  /* Ширина поля с кнопкой */
+  border: 1px solid #ccc;
+  /* Параметры рамки */
+  min-height: 20px;
+  /* Минимальная высота */
+  border-radius: 2px;
+  vertical-align: middle;
+  height: 2em;
+  border-radius: 4px;
+}
+
+input[type="search"] {
+  border: none;
+  /* Убираем рамку */
+  outline: none;
+  /* Убираем свечение в Chrome и Safari */
+  -webkit-appearance: none;
+  /* Убираем рамку в Chrome и Safari */
+  width: 80%;
+  /* Ширина поля */
+  vertical-align: middle;
+  /* Выравнивание по середине */
+}
+
+input[type="submit"] {
+  width: 12%;
+  /* Ширина кнопки */
+  vertical-align: middle;
+  border: none;
+  /* Убираем рамку */
+  background: url(../images/Screen_1.jpg) no-repeat 50% 50%;
+  /* Параметры фона */
+  cursor: pointer;
+}
+
+.entry-crumbs {
+  font-size: 0.9em;
+  color: #c3c3c3;
+  line-height: 18px;
+}
+
+.entry-crumbs a {
+  color: #ccc;
+  font-weight: bold;
+}
+
+.entry-crumbs a:hover {
+  color: #6a6a6a;
+}
+
+#myname {
+  width: 22%;
+  vertical-align: middle;
+}
+
+#myname p {
+  margin: 0;
+  vertical-align: middle;
+  border-right: 2px solid #ccc;
+}
+
+.imgart {
+  width: 18%;
+  margin-left: 1em;
+}
+
+.imgava {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.revtopart {
+  width: 50%;
+  text-align: right;
+  float: right;
+}
+
+.artnewstext {
+  display: flex;
+  width: 100%;
+  padding: 0.2em;
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.artpnews {
+  width: 70%;
+  margin-right: 1em;
+}
+
+.artpnews p {
+  margin-right: 1em;
+}
+
+.imgnews {
+  width: 30%;
+}
+
+.imgnews img {
+  width: 100%;
+  height: 100%;
+}
+
+/*///*/
+.insteadgrayright {
+  width: 100%;
+  margin-top: 10px;
+  height: auto;
+  background-color: #f8f8f8;
+  float: left;
+  display: block;
+  padding: 0 1em 0 1em;
+}
+
+.insteadgrayright h6 {
+  font-size: 0.8em;
+}
+
+.insteadgrayright1 {
+  width: 100%;
+  height: auto;
+  background-color: #f8f8f8;
+  float: left;
+  display: block;
+  padding: 0 1em 0 1em;
+}
+
+#updiscussed {
+  padding-top: 52em;
+}
+
+.insteadgrayright1 h6 {
+  font-size: 0.8em;
+}
+
+#coloratrname {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.dateartnews {
+  display: flex;
+  font-size: 0.8em;
+  text-align: left;
+  color: #ccc;
+}
+
+.Shadowaround3 {
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+  margin: 0 0 1em 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.amount a {
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.amount a:-webkit-any-link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1145px) {
+  .lang {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .search {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .header .logo {
+    margin: auto;
+  }
+
+  table td {
+    font-size: 0.7em;
+  }
+
+  table td img {
+    width: 100%;
+  }
+
+  .imgnews img {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttabl {
+    width: 85%;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.1em;
+    background: #FFFFFF;
+    text-align: center;
+    font-size: 0.6em;
+  }
+
+  .imgnews img {
+    width: 100%;
+    height: 65%;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-main1, .menu-main2 {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .menu-main1, .menu-main2 li {
+    display: block;
+  }
+
+  .menu-main1, .menu-main2 li:after {
+    content: none;
+  }
+
+  .menu-main1, .menu-main2 a {
+    padding: 25px 0 20px;
+    margin: 0 30px;
+  }
+
+  table td {
+    font-size: 0.6em;
+  }
+
+  table td img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header .menu ul {
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .header .menu ul li {
+    margin: 5px;
+  }
+
+  .blok_top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .blok_top div {
+    width: 100%;
+    padding: 0;
+    margin: auto;
+  }
+
+  ul#midlnav li a {
+    padding: 0.1em;
+    margin: auto;
+  }
+
+  .cards {
+    padding: 0;
+  }
+
+  .card1 {
+    display: none;
+    position: absolute;
+    top: -9999px;
+  }
+
+  .menu-main1 {
+    display: none;
+  }
+
+  .Tttext {
+    font-size: 0.7em;
+  }
+
+  .Shadowaround {
+    display: contents;
+  }
+
+  p {
+    white-space: nowrap;
+    /* Отменяем перенос текста */
+    overflow: hidden;
+    /* Обрезаем содержимое */
+    padding: 5px;
+    /* Поля */
+    text-overflow: ellipsis;
+    /* Многоточие */
+  }
+
+  p:hover {
+    background: #f0f0f0;
+    /* Цвет фона */
+    white-space: normal;
+    /* Обычный перенос текста */
+    margin: 0.5em;
+  }
+
+  .col-md-4 col-xl-3 aside {
+    height: 100%;
+  }
+
+  table td {
+    font-size: 0.5em;
+  }
+
+  table td img {
+    width: 100%;
+  }
+
+  .bottomlink {
+    display: table;
+    min-height: 50px;
+  }
+
+  .divbuttonrev {
+    display: flex;
+    width: 45%;
+  }
+
+  #footer p {
+    font-size: 0.8em;
+    padding-bottom: 3em;
+  }
+
+  .artnewstext {
+    display: flex;
+    text-align: center;
+    width: 100%;
+  }
+
+  .imgnews img {
+    width: 100%;
+    height: 75%;
+  }
+}

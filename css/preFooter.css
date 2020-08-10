@@ -1,0 +1,59 @@
+#preFooter {
+	font-family:Arial;
+	background-color: #fff;
+	color: #000;
+}
+.hcenterpreFooter{
+	width:100%;
+	text-align: center;
+}
+#preFooter ul{
+	list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+
+}
+
+#preFooter h5{
+	font-size: 1.2em;
+    color: #000;
+    font-weight: bold;
+    margin-top: 1em;
+	}
+
+#preFooter a{
+	color:#000;
+	text-decoration: none;
+}
+
+#preFooter a:hover, #preFooter a:focus{
+	text-decoration: none;
+	color:#ccc;
+}
+
+#preFooter .myCols{
+	font-size: 0.8em;
+	text-align: left;
+}
+#preFooter svg{
+	width: 1em;
+	margin-right: 0.2em; 
+	color: red;
+}
+
+
+
+
+@media screen and (max-width: 767px){
+	#preFooter {
+		text-align: center;
+	}
+	
+	#preFooter .myCols{
+	text-align: center;
+}
+
+}
+
+
+
